@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  
+  </head>
+  
+    <!-- header section start -->
+
+    <section class="header">
+      <a href="home.php" class="logo">TRIP TIGER</a>
+
+      <nav class="navbar" id="a">
+        <a href="home.php">Home</a>
+        <a href="package.php">Packages</a>
+        <a href="about.php">About Us</a>
+        <a href="contact.php">Contact</a>
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars" onclick="toggleMenu()"></div>
+    </section>
+
+    <!-- header section ends -->
+    <body>
+    <!-- home section satrt  -->
+   <div class="trip-tiger-container">
+  <div class="welcome-section">
+    <h1 id="welcomeh">Welcome to Trip Tiger</h1>
+    <p id="welcomep">Your ride, your way — Local, Outstation, or Airport trips made simple.</p>
+  </div>
+
+
+  <div class="form-section">
+    <div class="tabs" >
+      <button class="tab-btn active" data-form="local" onclick="showForm('local')">Local</button>
+      <button class="tab-btn" data-form="outstation" onclick="showForm('outstation')">Outstation</button>
+      <button class="tab-btn" data-form="airport" onclick="showForm('airport')">Airport</button>
+    </div>
+
+    <!-- Forms -->
+    <div class="form-content1">
+      <form id="local" class="form-group4 active-form"  action="book_local.php" method="POST">
+        <h2>Local Trip</h2>
+          <input type="text" placeholder="Full Name" name="namelocal">
+           <input type="tel"placeholder="Phone Number"   name="phonelocal"  pattern="[0-9]{10}">
+        <input type="text" placeholder="Pickup Location" name="Lpickup" required />
+        <input type="text" placeholder="Drop Location" name="Ldrop" required />
+        <input type="date" name="Ldate" />
+        <input type="time" name="Ltime"   required />
+        <button type="submit">Search Local Cabs</button>
+      </form>
+
+      <form id="outstation" class="form-group4"  action="oustation.php" method="POST">
+        <h2>Outstation Trip</h2>
+         <input type="text" placeholder="Full Name" name="nameout">
+        <input type="tel"placeholder="Phone Number"   name="phoneout"  pattern="[0-9]{10}">
+        <input type="text" placeholder="From City" required name="fromcityout" />
+        <input type="text" placeholder="To City" required name="tocityout" />
+        <input type="date" placeholder="Departure Date" required name="DepartureDate" />
+        <input type="date" placeholder="Return Date (Optional)"  name="ReturnDate"/>
+        <button type="submit">Check Outstation Cabs</button>
+      </form>
+
+      <form id="airport" class="form-group4"  action="airport.php" method="POST">
+        <h2>Airport Pickup & Drop</h2>
+          <input type="text" placeholder="Full Name" name="nameair">
+            <input type="tel"placeholder="Phone Number"   name="phoneair"  pattern="[0-9]{10}">
+        <select required name="triptype">
+          <option value="">Trip Type</option>
+          <option>Airport Pickup</option>
+          <option>Airport Drop</option>
+        </select>
+        <input type="text" placeholder="Airport Name" name="airportname" required />
+        <input type="text" placeholder="Address" required  name="address"/>
+        <input type="date" required name="airdate"/>
+        <input type="time" required  name="airtime"/>
+        <button   type="submit">Book Airport Transfer</button>
+
+      </form>
+    </div>
+     <div id="popup" class="popup">
+    <div class="popup-content">
+      <h3>🎉 Trip Confirmed!</h3>
+      <p>Your booking is successful. Check your email for confirmation.</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+ 
+  </div>
+</div>
+
+    <!-- home section ends -->
+    <!-- services section -->
+    <section class="services">
+      <h1 class="heading-title">Our services</h1>
+      <div class="box-container">
+        <div class="box">
+          <img src="serviceimages/triplogo.jpg" alt="" id="tripSer" />
+          <h3>TRIP</h3>
+        </div>
+
+        <div class="box">
+          <img src="serviceimages/intercitylogo.jpg" alt="" id="intercitySer" />
+          <h3>INTERCITY</h3>
+        </div>
+
+        <div class="box">
+          <img
+            src="serviceimages/outstationlogo.jpg"
+            alt=""
+            id="outstationSer"
+          />
+          <h3>OUTSTATION</h3>
+        </div>
+
+        <div class="box">
+          <img src="serviceimages/driverlogo.jpg" alt="" id="driverSer" />
+          <h3>APPOINT DRIVER</h3>
+        </div>
+      </div>
+    </section>
+    <!-- servics section end -->
+
+    <!-- home package section start  -->
+     <section class="home-packages">
+      <h1 class="heading-title ">our Packages</h1>
+
+      <div class="packages-container">
+        <div class="package-card">
+          <div class="package-image">
+            <img src="packageImages/MumbaiPK.jpg" alt="">
+          </div>
+          <div class="package-content">
+            <div class="package-title">Mumbai </div>
+            <div class="package-description">Places Usually Included in Mumbai Darshan Tours: 
+              Gateway of India/Siddhivinayak Temple/Marine Drive/ Bandra-Worli Sea Link 
+               </div>
+            <div class="package-price">₹4000-/</div>
+            <a href="packagebooking.php">
+              <button class="btn">Book Now</button>
+            </a>
+           
+          </div>
+        </div>
+    
+        <div class="package-card">
+          <div class="package-image">
+            <img src="packageImages/AlibaugPK.jpg" alt="">
+          </div>
+          <div class="package-content">
+            <div class="package-title">Alibaug</div>
+            <div class="package-description">Packages usually include a vehicle for transfers and local sightseeing. 
+             Alibaug Beach/Kolaba Fort/Murud Janjira Fort 
+            </div>
+            <div class="package-price">₹12,499</div>
+            <a href="packagebooking.php">
+              <button class="btn">Book Now</button>
+            </a>
+          </div>
+        </div>
+    
+        <div class="package-card">
+          <div class="package-image">
+            <img src="packageImages/Matheranpk2.jpg" alt="">
+          </div>
+          <div class="package-content">
+            <div class="package-title">Matheran</div>
+            <div class="package-description"> Packages usually include a vehicle for transfers and local sightseeing/Alexander Point/Echo Point/Panorama Point</div>
+            <div class="package-price">₹10,799</div>
+            <a href="packagebooking.php">
+              <button class="btn">Book Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="load-more-1"> <a href="package.php" class="btn">load more</a></div>
+     </section>
+
+
+    <!-- home package section end   -->
+
+
+
+
+     <!-- home  about section  -->
+
+
+    <Section class="home-about">
+        <div class="image">
+          <img src="sliderImages/aboutus/aboutus .jpg" alt="" />
+        </div>
+  
+        <div class="content">
+          <h3>About Us</h3>
+          <p>
+            Trip Tiger has been your trusted travel partner since 2006, proudly
+            delivering unforgettable travel experiences and reliable cab services
+            for over 19 years. Founded with a passion for exploration and a
+            commitment to customer satisfaction, we have grown into a trusted name
+            in the travel industry.
+          </p>
+          <a href="about.php">
+              <button class="btn">read more</button>
+          </a>
+        </div>
+      </Section>
+
+       <!-- home about section end  -->
+
+
+       <!-- home offer section -->
+        <section class="homer-offer">
+          <div class="content">
+            <h3>upto 30% off</h3>
+            <p>Explore exciting destinations at unbeatable prices! Grab our limited-time travel deals, discounts on tour packages, and exclusive seasonal offers. Book now and make your dream vacation more affordable than ever!
+
+            </p>
+          </div>
+        </section>
+
+        <!-- home offer section -->
+
+    <!-- footer section start -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Quick links</h3>
+          <a href="home.php"> <i class="fas fa-angle-right"></i>Home</a>
+          <a href="package.php"> <i class="fas fa-angle-right"></i>Packages</a>
+          <a href="about.php"> <i class="fas fa-angle-right"></i>About Us</a>
+          <a href="contact.php"> <i class="fas fa-angle-right"></i>Contact</a>
+        </div>
+
+        <div class="box">
+          <h3>Extra links</h3>
+          <a href="#"> <i class="fas fa-angle-right"></i>ask question</a>
+          <a href="#"> <i class="fas fa-angle-right"></i>about us</a>
+          <a href="#"> <i class="fas fa-angle-right"></i>privacy policy</a>
+          <a href="#"> <i class="fas fa-angle-right"></i>terms of use</a>
+        </div>
+
+        <div class="box">
+          <h3>Contact info</h3>
+          <a href="#"> <i class="fas fa-phone"></i>+91 9136377286</a>
+          <a href="#"> <i class="fas fa-phone"></i>+91 9967015581</a>
+          <a href="#">
+            <i class="fas fa-envelope"></i>triptiger1006@gmail.com</a
+          >
+          <a href="#"> <i class="fas fa-map"></i>Thane,India - 400604</a>
+        </div>
+        <div class="box">
+          <h3>follow us</h3>
+          <a href="#"> <i class="fab fa-facebook"></i>facebook</a>
+          <a href="#"> <i class="fab fa-twitter"></i>twitter</a>
+          <a href="#"> <i class="fab fa-instagram"></i>instagram</a>
+        </div>
+      </div>
+
+      <div class="credit">
+        created by <span>mr.Prajwal holmukhe / mr.varun satam</span> | all
+        rights reserved!
+      </div>
+
+ 
+
+    <!-- footer section ends -->
+
+    <!-- swiper js link -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

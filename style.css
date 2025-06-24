@@ -1,0 +1,1140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+      --main-color:rgb(198, 23, 186);
+      --black:#222;
+      --white:#fff9;
+      --light-black:#777;
+      --light-white:#fff9;
+      --dark-bg:rgba(0,0,0,.7);
+      --light-bg:#eee;
+      --border:.1rem solid var(--black);
+      --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+      --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+
+
+}
+
+*{
+        font-family: "Poppins", sans-serif;
+        margin:0; padding: 0;
+        box-sizing: border-box;
+        outline: none; border: none;
+        text-transform: capitalize;
+
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow: hidden; 
+     overflow: auto;
+      }
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: var(--white);
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+section{
+    padding: 5rem 10% ;
+} 
+
+.heading-title{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size:4rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+
+
+
+.header{
+    position: sticky;
+    top:0;left: 0;right: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: space-between;
+   
+   
+
+}
+
+.header .logo{
+    font-size:2.5rem;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--black);
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+   
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color:var(--black) ;
+    display:none;
+}
+
+/* home section  */
+
+.slider {
+    width: 99vw;
+    height: 100vh;
+    margin: 40px auto;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  }
+  
+  .slides {
+    display: flex;
+    width: 398%;
+    height: 100%;
+    animation: slideAnimation 16s infinite;
+  }
+  
+  .slide {
+    width: 100%;
+    transition: 0.6s;
+  }
+  
+  .slide img {
+    width: 25%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+
+  @keyframes slideAnimation {
+    0%   { margin-left: 0; }
+    20%  { margin-left: 0; }
+  
+    25%  { margin-left: -100%; }
+    45%  { margin-left: -100%; }
+  
+    50%  { margin-left: -200%; }
+    70%  { margin-left: -200%; }
+  
+  
+    100% { margin-left: 0; }
+  }
+
+  .book-now-btn {
+    padding: 10px 20px;
+    background-color: var(--black);
+    color: rgb(255, 255, 255);
+    border: none;
+    position:relative;
+    border-radius: 2px;
+    cursor: pointer;
+    
+
+  }
+  
+  .book-now-btn:hover {
+    background-color:var(--main-color);
+  }
+
+  .book-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    
+  }
+  #cityads{
+    width: 25%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+/* home section end  */
+
+/* booking section  */
+
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    height: 70%;
+    background-color: #fffdfd;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: var(--light-black);
+
+
+  }
+  button{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: var(--black);
+    color: var(--light-white);
+  }
+  button:hover{
+    background-color: var(--main-color);
+  }
+
+  .background {
+    background-image: url('carGIF/cab-hire.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: blur(2);
+  }
+
+  @media (max-width: 500px) {
+    .form-container {
+      margin: 50px auto;
+      padding: 15px;
+    }
+  }
+
+
+ 
+/* booking section  */
+
+
+/* review section of aboutus  */
+
+.swiper {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.swiper-slide {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+}
+
+.client-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.client-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stars {
+  color: #f4b400;
+  margin-bottom: 10px;
+}
+
+.review {
+  font-style: italic;
+  color: #555;
+}
+
+
+
+
+
+/* review section of aboutsus  */
+
+
+/* home packages section start */
+.packages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .package-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease;
+  }
+
+  .package-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .package-image img {
+    width: 100%;
+    height: 248px;
+    object-fit: cover;
+  }
+
+  .package-content {
+    padding: 15px;
+  }
+
+  .package-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  
+  }
+
+  .package-description {
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #555;
+  }
+
+  .package-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007BFF;
+  }
+
+  .load-more-1{
+    text-align: center;
+    margin-top: 2rem;
+    text-decoration: none;
+    padding:  3px 15px;
+  }
+
+.kolhapurpk{
+  width: 100%;
+  height: 248px;
+  object-fit: cover;
+}
+  
+
+
+
+/* home packages section end  */
+
+
+/* main packages  */
+
+.packages-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.package-image img {
+  width: 100%;
+  height: 248px;
+  object-fit: cover;
+}
+
+.package-content {
+  padding: 15px;
+}
+
+.package-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+
+}
+
+.package-description {
+  font-size: 12px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.package-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007BFF;
+}
+
+.loadMore{
+  text-align: center;
+  margin-top: 2rem;
+  text-decoration: none;
+  padding:  3px 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+.loadMore1{
+  text-align: center;
+  margin-top: 2rem;
+  text-decoration: none;
+  padding:  3px 15px;
+}
+
+.hidden1 {
+  display: none;
+}
+
+
+/* main packages  */
+
+
+/* booking form pacakge  */
+.form-container {
+  max-width: 750px;
+  margin: auto;
+  background: #f9f7f7;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 35px rgba(246, 2, 214, 0.522);
+ 
+}
+
+ .form-container #logoC{
+  width: 70px;
+ }
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  flex: 1 1 100%;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #090101;
+  background-color: var(--light-white);
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #000000;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+button:hover {
+  background:var(--main-color);
+}
+
+/* Popup styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 50px;
+  border-radius: 2px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h3 {
+  color: #28a745;
+  font-size: 2rem;
+}
+/* booking form pacakge  */
+
+
+
+
+/* about home  */
+.home-about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+ .home-about .image{
+    flex:1 1 41rem;
+
+ }
+
+ .home-about .image img{
+    width:90%;
+
+ }
+
+ .home-about .content{
+    flex:5 1 41rem;
+    padding: 3rem;
+    background-color:var(--light-bg);
+    font-size: 2rem;
+ }
+
+ .home-about .content h3{
+    font-size: 3rem;
+    padding: 1rem 0;
+    line-height: 2;
+    color: var(--black)
+ }
+ .btn{
+    background-color: var(--black);
+    color: #eee;
+    padding: 4px;
+ }
+
+ .btn:hover{
+    background-color: var(--main-color);
+ }
+
+
+/* about home end */
+
+
+
+
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem,1fr));
+    gap: 1.5rem;
+
+ 
+}
+ /* services section */
+
+
+#tripSer{
+    height: 15rem;
+    border-radius: 12px;;
+}
+#intercitySer{
+    height: 15rem;
+    border-radius: 12px;
+}
+#outstationSer{
+    height: 15rem;
+    border-radius: 12px;
+}
+#driverSer{
+    height: 15rem;
+    border-radius: 12px;
+}
+
+.services .box-container .box{
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+  
+}
+
+.services .box-container .box:hover{
+    padding: 2rem;
+    transition: 2s initial;
+    
+   
+}
+
+.services .box-container .box h3{
+ color: var(--main-color);
+ font-size:1.7rem;
+ padding-top: 1rem;
+}
+
+
+/* services section end  */
+
+
+/* home offer section  */
+.homer-offer{
+  text-align: center;
+  background-color: var(--light-bg);
+}
+
+.homer-offer .content{
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.homer-offer .content h3{
+  font-size: 3.5rem;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.homer-offer .content p{
+  font-size: 1.5rem;
+  color: var(--light-black);
+  line-height: 2;
+  padding:1rem 0;
+  background-color:var(--light-bg);
+}
+
+/* home offer section end */
+
+/* aboutus page start */
+
+.heading{
+   background-size: cover !important;
+   background-position: center !important;
+   padding-top: 10rem ;
+   padding-bottom: 1rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.heading h1{
+  font-size: 10rem;
+  text-transform:uppercase;
+  color: var(--white);
+  text-shadow: var(--text-shadow);
+  display:block;
+}
+
+
+
+.about{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.about .image{
+  flex:1 1 41rem;
+
+}
+
+.about .image img{
+  width: 86%;
+}
+.about .content{
+  flex:1 1 41rem;
+  text-align: center;
+}
+
+.about .content h3{
+ font-size: 3rem;
+ color:var(--black) ;
+}
+
+.about .content p{
+  font-size: 1.5rem;
+  color:var(--light-black) ;
+  line-height:2 ;
+  padding: 1rem 0;
+ }
+
+ .about .content .icons-container{
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-end;
+
+ }
+
+ .about .content .icons-container .icons{
+  background: var(--light-bg);
+  padding: 2rem;
+  flex: 1 1 16rem;
+ }
+
+ .about .content .icons-container .icons i{
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--main-color);
+ }
+
+ .about .content .icons-container .icons span{
+  font-size: 1.5rem;
+  color:var(--light-black) ;
+
+ }
+/* aboutus page end  */
+
+
+/* contact us section start */
+
+  .form-container {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .input-field5 {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .input-field5:focus {
+            border-left-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .floating-label {
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        input:focus + .floating-label,
+        input:not(:placeholder-shown) + .floating-label,
+        textarea:focus + .floating-label,
+        textarea:not(:placeholder-shown) + .floating-label {
+            transform: translateY(-25px);
+            font-size: 0.8rem;
+            color: #667eea;
+        }
+        
+        .success-message {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+/* contact us section start  end  */
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    background: url(footer.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+    background-color: #292c37;
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    gap: 2rem;
+}
+.footer .box-container .box h3{
+    color: var(--white);
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+.footer .box-container .box a{
+    color: var(--light-white);
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    display: block;
+}
+
+.footer .box-container .box a i{
+    color: var(--main-color);
+    padding-right: .5rem;
+    transition: .1s linear;
+}
+
+.footer .box-container .box a:hover i{
+  
+    padding-right: .2rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: .1rem solid var(--light-white);
+    font-size: 2rem;
+    color: var(--white); 
+}
+.footer .credit span{
+    color:var(--main-color);
+}
+
+
+
+
+
+/* media queries */
+@media (max-width:1200px){
+    section{
+        padding: 3rem 5%;
+    }
+}
+
+@media (max-width:991px){
+
+    html{
+
+        font-size: 55%;
+    }
+    section{
+        padding: 3rem 5%;
+    }
+}
+@media (max-width:768px){
+   
+
+    #menu-btn{
+        display:inline-block;
+        transition: .2s linear;
+    }
+
+
+    #menu-btn.fa-time{
+        transform: rotate(180deg);
+    }
+    
+    .header .navbar {
+      position: absolute;
+      top: 99%; left:0; right:0;
+      background-color: var(--white);
+      border-top: 2rem;
+    }
+
+    .header .navbar .active{
+        clip: polygon(0 0,100% 0,100% 100%, 0 100%);
+    }
+
+  
+
+    .header .navbar  #a{
+        display: block;
+        margin: 2rem;
+        text-align: center;
+
+    }
+
+}
+
+@media (max-width:420px){
+
+    html{
+
+        font-size: 50%;
+    }
+   
+}
+
+
+
+
+
+
+.trip-tiger-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.welcome-section  {
+  flex: 1;
+  color: white;
+  display: flex;
+   background: url('packageImages/darkforest.avif') center/cover no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+
+
+#welcomeh{
+  font-size: 5rem;
+}
+
+#welcomep{
+  font-size: 2rem;
+}
+
+.form-section {
+  flex: 1;
+  background-color: #fff;
+  padding: 40px;
+}
+
+.tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 16px;
+      margin-top: -45px;
+}
+
+.tab-btn {
+  background: none;
+  border: 2px solid rgb(255, 0, 255);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  color: rgb(0, 0, 0);
+}
+
+.tab-btn.active {
+  background-color: rgb(255, 0, 208);
+  color: white;
+}
+
+.form-content1 {
+  position: relative;
+}
+
+.form-content1 h2{
+  font-size: 2rem;
+  color: var(--black);
+  margin-top: 0px;
+}
+
+.form-group4 {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid #ccc;
+  padding: 7px;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+.form-group4 input,
+.form-group4 select,
+.form-group4 button {
+  padding: 6px;
+  font-size: 16px;
+}
+
+#formbtn[type="submit"] {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.active-form {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .trip-tiger-container {
+    flex-direction: column;
+  }
+
+  .rip-tiger-container, .form-section {
+    width: 100%;
+    height: auto;
+  }
+
+ 
+  .tab-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-buttons button {
+    margin-bottom: 0.5rem;
+    width: 80%;
+  }
+}
+
+/* home page popup */
+
+
+/* contact us section  */
+.contact-section {
+  padding: 50px 20px;
+  background: #f9f9fa;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.contact-info, .contact-form {
+  flex: 1 1 50%;
+  padding: 40px;
+}
+
+.contact-info {
+  background: var(--light-bg);
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+}
+
+.contact-info h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #007BFF;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 25px;
+  line-height: 1.6;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  background-color: var(--light-bg);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #6f42c1;
+  box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.2);
+}
+
+.contact-form button {
+  padding: 14px;
+  background-color: var(--black);
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info, .contact-form {
+    flex: 1 1 100%;
+    padding: 30px;
+  }
+
+  .contact-info h2,
+  .contact-form h2 {
+    font-size: 24px;
+  }
+}
+
+/* contact us section  */
